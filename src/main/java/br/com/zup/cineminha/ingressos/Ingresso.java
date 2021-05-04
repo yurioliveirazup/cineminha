@@ -22,7 +22,7 @@ public class Ingresso {
     private BigDecimal precoFinal = ZERO;
 
     @Enumerated(EnumType.STRING)
-    private Tipo tipoDeIngresso;
+    private Tipo tipo;
 
     /**
      * @deprecated hibernate apenas
@@ -37,6 +37,6 @@ public class Ingresso {
         this.sessao = sessao;
         this.preco = preco;
 
-        this.tipoDeIngresso = tipoDeIngresso;
+        this.tipo = tipoDeIngresso;
     }
 }
