@@ -13,14 +13,9 @@ import static java.time.temporal.ChronoUnit.HOURS;
 @SpringBootTest
 class CineminhaApplicationTests {
 
-	@Autowired
-	private FilmeRepository repository;
-
 	@Test
 	void contextLoads() {
-		Filme homemAranha = new Filme("Homem Aranha", Duration.of(1, HOURS));
 
-		repository.save(homemAranha);
 	}
 
 }
