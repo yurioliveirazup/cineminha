@@ -3,27 +3,29 @@ package br.com.zup.cineminha.ingressos;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
+import javax.persistence.ManyToOne;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
 @Entity
-public class Sala {
+public class Ingresso {
+
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
-    @NotBlank
-    private String nome;
+    @ManyToOne
+    private Sessao sessao;
 
-    /**
-     * @deprecated hibernate apenas
-     */
-    @Deprecated
-    public Sala() { }
+    private LocalDateTime horaDaCompra;
 
-    public Sala(String nome) {
-        this.nome = nome;
-    }
+    private BigDecimal preco;
+
+    private Tipo tipo;
+
+
 }

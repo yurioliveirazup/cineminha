@@ -19,6 +19,12 @@ public class Sessao {
     @ManyToOne
     private Sala sala;
 
+
+    // Uma Sessao tem um filme
+    // Um filme passa em muitas sessões
+    // Sessao [muitas] para [um] filme -> Sessao ManyToOne Filme
+    // |         Sessao       |
+    // | id_sessao | filme_id |
     @ManyToOne
     private Filme filme;
 
