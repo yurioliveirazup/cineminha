@@ -1,5 +1,4 @@
 package br.com.zup.cineminha.compras;
 
-public class CompraController {
-
+public class Ingresso {
 }
