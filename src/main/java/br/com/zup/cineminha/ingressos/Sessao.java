@@ -1,6 +1,7 @@
 package br.com.zup.cineminha.ingressos;
 
 import javax.persistence.*;
+import javax.validation.constraints.Positive;
 
 import java.math.BigDecimal;
 import java.time.LocalTime;
@@ -28,6 +29,7 @@ public class Sessao {
     @ManyToOne
     private Filme filme;
 
+    @Positive
     private BigDecimal preco;
 
     /**
