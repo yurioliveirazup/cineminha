@@ -39,4 +39,8 @@ public class Sessao {
         this.filme = filme;
         this.preco = preco;
     }
+
+    public BigDecimal getPreco() {
+        return preco;
+    }
 }
